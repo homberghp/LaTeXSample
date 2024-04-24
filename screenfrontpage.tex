@@ -1,0 +1,62 @@
+\svnidlong{$HeadURL: https://www.fontysvenlo.org/svnp/879417/latexcolloquium/trunk/latexsample/screenfrontpage.tex $}%
+{$LastChangedDate: 2013-09-08 12:54:29 +0200 (Sun, 08 Sep 2013) $}%
+{$LastChangedRevision: 31 $}%
+{$LastChangedBy: 879417 $}
+\svnid{$Id: screenfrontpage.tex 31 2013-09-08 10:54:29Z 879417 $}
+\renewcommand\TheFile{screenfrontpage.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   This is frontpage.tex file needed for the dmathesis.cls file.  You   %
+%  have to  put this file in the same directory with your thesis files.  %
+%                Written by M. Imran 2001/06/18                          % 
+%                 No Copyright for this file                             % 
+%                 Save your time and enjoy it                            % 
+%                                                                        % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%           The title page           %%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{roman}
+
+\newpage
+{
+\setlength{\unitlength}{1mm}
+\begin{picture}(0,0)(15,122)
+\put(0,0){\fbox{\includegraphics[width=215mm]{figures/fontys-page-screen}}}
+\put(60,140){\color{white}\Huge \bf \sf A \LaTeX{} screen reading sample}
+\put(100,130){\color{white}\sf\Large{Fontys Venlo Software Engineering series}}
+%% \put(5,2){\begin{minipage}[b]{\textwidth}
+%%     \parindent=0in\raggedright
+%%     {\large \sffamily\color{gray}
+%%       Fontys Hogeschool voor Techniek en Bedrijfsmanagement\\
+%%       Hogere Informatica/ Software Engineering\\
+%%       Hulsterweg 2-6 Venlo\\
+%%       The Netherlands\\
+%%     }
+%%   \end{minipage}}
+\end{picture}
+}
+\thispagestyle{empty}
+\begin{center}
+  %\vspace*{4cm}
+%\begin{minipage}[b]{\textwidth}
+%% \parindent=0in\raggedleft
+%% {\Huge \bf \sf \makeatletter\@title\makeatother}
+
+%% \noindent{\Large\sffamily A sample file to showcase \LaTeX}
+%% %\vspace*{2cm}
+
+%% \noindent{\LARGE\bf\makeatletter\@author\makeatletter}
+
+%% %\vspace*{20mm}
+\includegraphics[width=.8\textwidth]{figures/latexfiles}
+%\end{minipage}
+\end{center}
+%empty backside of frontpage
+\pagestyle{empty}
+\cleardoublepage
+\setcounter{page}{1}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End: 

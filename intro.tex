@@ -1,0 +1,108 @@
+\svnidlong{$HeadURL: https://www.fontysvenlo.org/svnp/879417/latexcolloquium/trunk/latexsample/intro.tex $}%
+{$LastChangedDate: 2014-11-16 16:03:56 +0100 (zo, 16 nov 2014) $}%
+{$LastChangedRevision: 62 $}%
+{$LastChangedBy: 879417 $}
+\svnid{$Id: intro.tex 62 2014-11-16 15:03:56Z 879417 $}
+
+\renewcommand\TheFile{intro.tex}
+
+% quote text
+\begin{savequote}[8cm]
+  \sffamily
+  Introducing oneself properly is always hard.
+  \qauthor{Anonymous}
+\end{savequote}
+\chapter{Introduction}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+One of the standards for documentation in open source and hence in
+Linux land is \LaTeX, a text processing package. \LaTeX\ is available
+for free and available with all Linux distributions and installed in
+the Lab.
+
+\TeX\ is the machinery of \LaTeX\ and was defined in the \TeX\ book
+\citep{texbook} and implemented by
+Prof. Donald Knuth. \LaTeX\ is a (nowadays HUGE) set of macros built
+on top of that. \LaTeX\ in its initial form is described by Leslie
+Lamport in \citep{latexbook}. If you like your book thick, try the
+\LaTeX\ companion \citep{latexcompanion}.
+
+The web is also a very good source of \LaTeX\ documentation. A good
+starting point is \url{http://en.wikibooks.org/wiki/LaTeX}, useful for
+beginners and pros alike.
+
+This is a simple multi part document. It's purpose is to show how easy it is
+to create a multi part document, one that, for instance, can be worked on 
+simultaneously by several authors. Note that most of the settings for
+this document are set in the file \texttt{mydefs.tex}. 
+Look in that file too.
+
+This document consists of the following files
+\begin{enumerate}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+\item \texttt{main.tex}
+\item \texttt{motivation.tex}
+\item \texttt{graphics.tex}
+\item \texttt{codelisting.tex}
+\item \texttt{poser.tex}
+\item \texttt{hello.c}
+\item \texttt{Makefile} and
+\item \texttt{mydefs.tex}
+\item \texttt{servlet3.png}, the pie chart
+\item \texttt{Diagram1.pdf}, the UML diagram
+\end{enumerate} 
+
+You are kindly advised to keep your lab logs in simple text
+files. These can be turned into latex files easily,
+which can be used to produce a nice looking report.
+\clearpage 
+\section{Some hints to start with}
+Sometimes things do not work out the way you think.
+\LaTeX\ interpretes some character codes in it's own way.
+Things like dollar signs or even underscore are special.
+\LaTeX\ source are littered with accolades or \textit{curly braces} if that's
+the way you call them. They are special too. So here is some advice: 
+
+Do not use \define{funny file names}. That is: stick to ASCII filenames without spaces or even underscores. 
+These will bring only you into trouble. If you want to keep things portable, 
+don't use camel case (like in JavaClassNames) either, because
+some OS-es do not distinguish between upper and lower case. You may of
+course brake this rule if the files are program things like
+Java source files.
+
+\subsection{Hints for informatics (use version control)}
+In software projects, versioning is important. \LaTeX\ and \textsc{SubVersion}
+work nicely together here.
+By using the \LaTeX\ package \texttt{svn-multi} you can have svn+
+latex insert meta information about your files in the produced output,
+for instance in the page footers, as in this document.
+
+If you add the codes below at the top of each .tex file, these
+codes will be expanded/updated by svn \textit{on checkin}. 
+% do not expand keywords on  the example file
+\lstinputlisting{svnkeywords.head}
+You must also tell
+subversion to expand these keywords for those files with for each file
+the command:\\
+{\lstset{language=sh,numbers=none,morekeywords={svn,propset,keywords,filename},keywordstyle={\color{blue}}}
+\begin{lstlisting}[frame=single]
+svn propset svn:keywords "Id Author File Date LastChangeDate
+  Revision HeadURL Header"  filename
+\end{lstlisting}
+}
+To keep these version codes up to date, first check if your \LaTeX\  files compile,
+then check them in and do your final \LaTeX\  run. 
+
+To make the version codes of the files appear on the bottom line, have
+a look at the mydefs.tex file where the fancy headers and footers are defined.
+In group work you may also find it comfortable to create a file named
+\texttt{myauthors.tex} with contents like below, which is then
+input into the main or mydefs at the proper place and can translate
+student numbers from svn and you peerweb account into a humanly
+readable authors name.
+
+\lstinputlisting[frame=single]{myauthors.tex}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End: 

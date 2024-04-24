@@ -1,0 +1,86 @@
+\documentclass[a5paper,11pt,landscape]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[a5paper,includemp,
+      scale={0.9,0.85},
+      includeheadfoot,
+      bindingoffset=0cm]{geometry}
+\input{mydefs}
+\svnidlong{$HeadURL: https://www.fontysvenlo.org/svnp/879417/latexcolloquium/trunk/latexsample/screen.tex $}%
+{$LastChangedDate: 2013-09-08 12:54:29 +0200 (Sun, 08 Sep 2013) $}%
+{$LastChangedRevision: 31 $}%
+{$LastChangedBy: 879417 $}
+\svnid{$Id: screen.tex 31 2013-09-08 10:54:29Z 879417 $}
+\renewcommand\TheFile{screen.tex}
+
+%
+% hyperef last, after all other packages
+% this allows you to add hyperlinks in the document.
+% It makes viewing it with e.g. Adobe acrobat very nice.
+
+\usepackage[pdftex,colorlinks=false,
+    pdfstartview=FitV,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    ]{hyperref}
+\pdfinfo{
+  /Title      (Sample latex document)
+  /Author     (Pieter van den Hombergh 879417)
+  /Keywords   (latex documentation graphics math listings)
+}
+
+%%
+% Fancy headers are used
+% To make the footer appear on chapter pages too,
+% we redefine the fancypagestyle plain
+\fancypagestyle{plain}{%
+  \fancyhf{} % clear all  
+  \fancyfoot[RO,LE]{%
+  Revision: \svnrev, \svndate\\
+}
+  \fancyfoot[RE,LO]{\includegraphics[width=1cm]{figures/fon000_00c.pdf}}
+  \fancyfoot[C]{\bfseries\thepage}
+  \renewcommand\headrule{}%
+}% end of redef fancypagestyl plain
+% Define my own fancy headers and footers  
+
+\setlength{\unitlength}{1mm}
+\fancyhead{}
+\fancyhead[LO,LE]{\leftmark} % display section name
+\fancyhead[RO,RE]{\rightmark}
+\fancyfoot[RO,LE]{%
+  Revision: \svnrev, \svndate\\
+}
+% logo in footer
+\fancyfoot[RE,LO]{\includegraphics[width=1cm]{figures/fon000_00c.pdf}}
+\pagestyle{fancy}
+\renewcommand\footrule{}
+% every document needs a start and an end
+\author{Pieter van den Hombergh\\879417}
+\title{Sample \LaTeX\ document}
+%\includeonly{intro}
+\begin{document}
+% lets have a default title page
+\input{screenfrontpage}
+% I want a TOC
+\pagestyle{fancy}
+\tableofcontents
+\newpage
+\listoffigures
+% The first chapter is in file intro
+% this is a comment
+% the next few lines include the other chapters.
+% If the chapter files are not present they will simply not be found
+% at most a warning is produced.
+\renewcommand\watermarktext{}%{Fontys}
+\cleardoublepage
+\linenumbers
+\include{intro}
+\include{motivation}
+\include{mathematics}
+\include{graphics}
+\include{codelisting}
+\include{poser}
+\include{programmedgraphics}
+\input{backside}
+\end{document}

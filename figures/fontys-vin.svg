@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000.025"
+   height="290.80374"
+   id="svg1325"
+   sodipodi:version="0.32"
+   inkscape:version="0.45"
+   sodipodi:docname="fontys-vin.svg"
+   sodipodi:docbase="/home/hom/fthv/hi/fnd2/linuxlab/latexsample/figures"
+   version="1.0"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   sodipodi:modified="true">
+  <metadata
+     id="metadata1378">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:cy="14.401587"
+     inkscape:cx="939.85066"
+     inkscape:zoom="1"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     inkscape:window-height="983"
+     inkscape:window-width="1774"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:window-x="98"
+     inkscape:window-y="77"
+     inkscape:current-layer="svg1325"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     showgrid="false"
+     inkscape:object-paths="false"
+     inkscape:grid-bbox="false"
+     inkscape:guide-points="true"
+     inkscape:object-nodes="true"
+     width="800.02pt"
+     height="232.64299pt"
+     units="pt"
+     gridspacingx="0.28222223mm"
+     gridspacingy="0.28222223mm"
+     gridanglex="8.4666669mm"
+     gridanglez="8.4666669mm"
+     grid_units="mm"
+     inkscape:document-units="pt">
+    <sodipodi:guide
+       orientation="horizontal"
+       position="188.23562"
+       id="guide2201" />
+    <sodipodi:guide
+       orientation="vertical"
+       position="48.270323"
+       id="guide2203" />
+    <sodipodi:guide
+       orientation="vertical"
+       position="147.60655"
+       id="guide2205" />
+    <sodipodi:guide
+       orientation="horizontal"
+       position="173.88498"
+       id="guide2207" />
+    <sodipodi:guide
+       orientation="horizontal"
+       position="192.63215"
+       id="guide4179" />
+    <sodipodi:guide
+       orientation="vertical"
+       position="0.10928078"
+       id="guide4199" />
+    <sodipodi:guide
+       orientation="horizontal"
+       position="18.687013"
+       id="guide4201" />
+    <sodipodi:guide
+       orientation="vertical"
+       position="99.445508"
+       id="guide4203" />
+    <sodipodi:guide
+       orientation="horizontal"
+       position="28.740845"
+       id="guide4205" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1327">
+    <marker
+       id="ArrowEnd"
+       viewBox="0 0 10 10"
+       refX="0"
+       refY="5"
+       markerUnits="strokeWidth"
+       markerWidth="4"
+       markerHeight="3"
+       orient="auto">
+      <path
+         d="M 0,0 L 10,5 L 0,10 L 0,0 z "
+         id="path1330" />
+    </marker>
+    <marker
+       id="ArrowStart"
+       viewBox="0 0 10 10"
+       refX="10"
+       refY="5"
+       markerUnits="strokeWidth"
+       markerWidth="4"
+       markerHeight="3"
+       orient="auto">
+      <path
+         d="M 10,0 L 0,5 L 10,10 L 10,0 z "
+         id="path1333" />
+    </marker>
+  </defs>
+  <path
+     id="path1337"
+     d="M -757.468,1669.4407 L -757.468,1669.4407 L -757.468,1669.4407 z "
+     style="fill:#64307b;fill-opacity:1;fill-rule:evenodd;stroke:none" />
+  <path
+     style="fill:#330033;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 0.019312348,290.80373 C 0.019312348,290.80373 42.178508,272.36886 126.96616,248.30946 C 247.44088,214.1235 259.33201,219.89059 259.33201,219.89059 C 237.22256,236.60471 230.57031,240.79205 175.71557,288.73283 C 223.51768,271.83568 302.98257,256.16423 397.60728,239.75833 C 491.47103,223.48434 595.91529,222.56649 595.91529,222.56649 C 595.91529,222.56649 698.60233,222.41284 799.65249,243.07501 C 900.54624,263.70524 1000.022,290.80373 1000.022,290.80373 L 1000.0027,0 L 0,0 L 0.019312348,290.80373 z "
+     id="path2213"
+     sodipodi:nodetypes="csccsczcccc" />
+</svg>

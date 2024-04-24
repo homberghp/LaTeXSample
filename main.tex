@@ -1,0 +1,79 @@
+\documentclass[a4paper,11pt,twoside]{report}
+\usepackage[utf8]{inputenc}
+
+% geometry for the documents in this dir.
+\usepackage[a4paper,includemp,
+      scale={0.9,0.9},
+      includeheadfoot,
+      bindingoffset=1.5cm]{geometry}
+\input{mydefs}
+%% If you need a bibliography
+%
+% \usepackage[square]{jurabib}
+% \bibliographystyle{jurabib}
+\usepackage[backend=biber,
+style=alphabetic,natbib=true,
+sorting=nyt]{biblatex}
+\addbibresource{bibtex/latex.bib}
+\addbibresource{bibtex/SEN2Bibliography.bib}
+\svnidlong{$HeadURL: https://www.fontysvenlo.org/svnp/879417/latexcolloquium/trunk/latexsample/main.tex $}%
+{$LastChangedDate: 2014-11-16 16:03:56 +0100 (zo, 16 nov 2014) $}%
+{$LastChangedRevision: 62 $}%
+{$LastChangedBy: 879417 $}
+\svnid{$Id: main.tex 62 2014-11-16 15:03:56Z 879417 $}
+
+\renewcommand\TheFile{main.tex}
+
+%
+% hyperef last, after all other packages
+% this allows you to add hyperlinks in the document.
+% It makes viewing it with e.g. Adobe acrobat very nice.
+
+\usepackage[pdftex,colorlinks=false,
+    pdfstartview=FitV,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+    ]{hyperref}
+\pdfinfo{
+  /Title      (Sample latex document)
+  /Author     (Pieter van den Hombergh 879417)
+  /Keywords   (latex documentation graphics math listings)
+}
+
+
+% every document needs a start and an end
+\author{Pieter~van~den~Hombergh\\879417}
+\title{Sample \LaTeX\ document}
+\begin{document}
+% lets have a default title page
+\input{frontpage}
+% I want a TOC
+\pagestyle{fancy}
+\tableofcontents
+\newpage
+\listoffigures
+% The first chapter is in file intro
+% this is a comment
+% the next few lines include the other chapters.
+% If the chapter files are not present they will simply not be found
+% at most a warning is produced.
+%\renewcommand\watermarktext{Fontys}
+\cleardoublepage
+\linenumbers
+\modulolinenumbers[5]
+\include{intro}
+\include{motivation}
+\include{mathematics}
+\include{graphics}
+\include{codelisting}
+\include{poser}
+\include{programmedgraphics}
+\include{citingsimple}
+
+
+\lstlistoflistings
+\input{bibliography}
+\clearpage
+\input{backside}
+\end{document}

@@ -1,0 +1,177 @@
+% This is an annotated latex definition file.
+% You can give it any name as long as its inputted somewhere
+% in your code.
+% You may even put it in a directory other then the current
+% as long as that directory is in the TEXINPUTS path.
+% Comments start with a % as you a seeing right now. Otherwise look
+% to the left.
+% font of the times family
+%\usepackage{palatino}
+\usepackage{lmodern}
+% make linenumbering possible for reviewing
+\usepackage[pagewise,mathlines,displaymath]{lineno}
+% use the pdftex graphics extensions
+\usepackage{graphicx}
+\usepackage{wrapfig}
+% to make the headers and footers look nice
+\usepackage{xcolor,fancyhdr}
+% allow drawing with tikz
+\usepackage{tikz}
+% allow compact lists etc.
+\usepackage{enumitem}
+% make the header (and footer) span the whole printable area
+\addtolength\headwidth\marginparwidth
+\addtolength\headwidth\marginparsep
+\pagestyle{fancy}
+\usepackage[all]{svn-multi}
+\input{myauthors}
+% \usepackage{svn}
+\newcommand\TheFile{mydefs.tex}
+\newcommand\Code[1]{\textbf{\texttt{#1}\ }}
+%%
+% to get version information in files, include the following lines in
+% each document 
+% and renewcommand\TheFile to something like \renewcommand\TheFile{main.text}
+%\renewcommand\footrulewidth{1pt}
+% put revision control info in the footer
+% the vspace compensates for the space taken up by the logo on the right hand.
+% I like a fontys color in my header
+\definecolor{purple}{rgb}{0.21,0,0.21} % a darkish purple
+\renewcommand\headrule{%
+  {\color{purple}%
+    \hrule height 2pt width \headwidth
+    \vspace{1pt}%
+    \hrule height 1pt width \headwidth
+    \vspace{-4pt}%
+  }%
+}%
+\renewcommand\footrule{
+  {\color{purple}%
+    \hrule height 1pt width \headwidth
+    \vspace{1pt}%
+    \hrule height 2pt width \headwidth
+    \vspace{2pt}%
+  }%
+}
+% do not indent pars, increase parskip
+\setlength\parindent{0pt}
+\setlength\parskip{0.5em}
+% my own itemize: a bit less spacy then the default
+\newenvironment{Itemize} {
+  \begin{itemize}{}%
+    \setlength\topsep{0ex}%
+    \setlength\parskip{0ex}%
+    \setlength\partopsep{0em}%
+    \setlength\parsep{0em}%
+    \setlength\itemsep{0em}%
+    }%
+  {\end{itemize}}
+% make the head a bit heigher
+\setlength\headheight{16pt}
+\setlength\footskip{60pt}
+%%
+% This macro '\define' puts the argument in em 
+% and in boldface in the margin.
+\newcommand{\define}[1]{% 1 argument
+  \mbox{}{\textit{#1}}% italics or em
+  \marginpar{\raggedright% no adjust
+    \bfseries\hspace{0pt}#1}% bold
+} % end of macro
+
+%%
+% At start of pages, define sometimes puts the material in the wrong margin
+% in that case use this fix.
+\newcommand{\fixdefine}[1]{\mbox{}{\textit{#1}}%
+  \reversemarginpar\marginpar{\bfseries\hspace{0pt}#1}\normalmarginpar}
+% to display source code like things
+\usepackage{listings}
+\lstset{numbers=right} % to get out of the way with document line numbers
+% to be able to 'on this page' and the like
+\usepackage{varioref}
+% to put a nice quote with the chapter
+\usepackage[avantgarde]{quotchap}
+\renewcommand\chapterheadstartvskip{\vspace*{-5\baselineskip}}
+%select Helvetica for title and quote
+\usepackage{helvet}
+\renewcommand\sectfont{\sffamily\bfseries}
+
+%% example
+%\begin{savequote}[10cm]
+% \sffamily
+%some text
+%\end{savequote}
+% needed for inclusion of gnumeric table
+\def\inputGnumericTable{}
+%% 
+\usepackage{array}    
+\usepackage{longtable}
+\usepackage{calc}     
+\usepackage{multirow} 
+\usepackage{hhline}   
+\usepackage{ifthen}   
+%%
+% Fancy headers are used
+% To make the footer appear on chapter pages too,
+% we redefine the fancypagestyle plain
+\fancypagestyle{plain}{%
+  \fancyhf{} % clear all  
+  \fancyfoot[RO,LE]{\vspace{-1.2cm}%
+  File: \svnkw{Filename}\\%
+  Author: \svnFullAuthor*{\svnfileauthor}\\%
+  Revision: \svnrev, \svnyear-\svnmonth-\svnday\ \svnhour:\svnminute\\
+}
+  \fancyfoot[RE,LO]{\includegraphics[width=2cm]{figures/fon000_00c.pdf}}
+  \fancyfoot[C]{\bfseries\thepage}
+  \renewcommand\headrule{}%
+}% end of redef fancypagestyl plain
+% Define my own fancy headers and footers  
+\fancyhead{}
+\fancyhead[RO]{\rightmark} % display section name
+\fancyhead[LE]{\rightmark}
+\fancyfoot[RO,LE]{\vspace{-1.2cm}%
+  File: \svnkw{Filename}\\%
+  Author: \svnFullAuthor*{\svnfileauthor}\\%
+  Revision: \svnrev, \svnyear-\svnmonth-\svnday\ \svnhour:\svnminute\\
+}
+% logo in footer
+\fancyfoot[RE,LO]{\includegraphics[width=2cm]{figures/fon000_00c.pdf}}
+\pagestyle{fancy}
+\usepackage{fontyscoverpage}
+%%
+% For a watermark on each page:
+\usepackage{eso-pic} % needed package
+% Draw a DRAFT through the text.
+% for other text renewcommand the next command
+\newcommand\watermarktext{Draft}
+% You could make this depend on the status of the files.
+\makeatletter
+  \AddToShipoutPicture{%
+    \setlength{\@tempdimb}{.5\paperwidth}%
+    \setlength{\@tempdimc}{.5\paperheight}%
+    \setlength{\unitlength}{1pt}%
+    \put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){%
+      \makebox(0,0){\rotatebox{55}{% for longer texts you might want to increase this angle
+          \textcolor[gray]{0.85}{% the higher the number, the lighter the text
+            \fontsize{8cm}{8cm}% Fit this font to the text
+            \sffamily
+            \selectfont{\watermarktext}}}}
+    }
+}
+\makeatother
+\lstdefinelanguage{BibTeX}
+  {keywords={%
+      @article,@book,@collectedbook,@conference,@electronic,@ieeetranbstctl,%
+      @inbook,@incollectedbook,@incollection,@injournal,@inproceedings,%
+      @manual,@mastersthesis,@misc,@patent,@periodical,@phdthesis,@preamble,%
+      @proceedings,@standard,@string,@techreport,@unpublished%
+      },
+   comment=[l][\itshape]{@comment},
+   sensitive=false,
+  }
+
+% thenext comments are inserted by Emacs, that uses it 
+% to process this latex file
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

@@ -1,0 +1,38 @@
+\pagenumbering{roman}
+\AddToShipoutPicture*{\CoverBackgroundPic}
+
+{
+\setlength{\unitlength}{1mm}
+\begin{picture}(0,0)(25,270)
+\put(40,75){\includegraphics[width=140mm]{figures/latexlion.pdf}}
+\put(140,69){\color{gray}drawing by Duane Bibby}
+
+  \put(10,10){\begin{minipage}[b]{\textwidth}
+    \parindent=0in\raggedright
+    {\large \sffamily\color{gray}
+      \addresslines}
+  \end{minipage}}
+\end{picture}
+}
+\thispagestyle{empty}
+\vspace{10mm}
+\begin{center}
+  \begin{minipage}[b]{\textwidth}
+    \parindent=0in\raggedleft
+    {\Huge \bf \sf \makeatletter\@title\makeatother}
+    
+    \noindent{\Large\sffamily A sample file to showcase \LaTeX}
+    \vspace*{1cm}
+    
+    \noindent{\LARGE\bf\makeatletter\@author\makeatletter}
+    
+  \end{minipage}
+\end{center}
+% empty backside of frontpage
+\pagestyle{empty}
+\cleardoublepage
+\setcounter{page}{1}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End: 
